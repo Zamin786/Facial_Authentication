@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facial Recognition using Web</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="px-4 pt-5 my-5 text-center border-bottom">
+        <h1 class="">Facial Recognition using Web</h1>
+        <div class="col-lg-6 mx-auto">
+            <p style="color: white;" class="lead mb-4">FaceGuard is an advanced facial recognition system created by <b>Zamin Rashid Sheikh</b>. This innovative application utilizes state-of-the-art machine learning algorithms to accurately identify individuals based on their facial features. With FaceGuard, users can enhance security measures by effortlessly monitoring and managing access to restricted areas or sensitive information..</p>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="nameInput" placeholder="Enter your name">
+                <button class="btn btn-outline-secondary" type="button" onclick="validateName()">Submit</button>
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="searchBar" placeholder="Enter website URL">
+                <button class="btn btn-outline-secondary" type="button" onclick="searchWebsite()">Search</button>
+            </div>
+            <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3" onclick="openCamera()">Open
+                Camera</button>
+            <button type="button" class="btn btn-outline-secondary btn-lg px-4"
+                fdprocessedid="4fay2k">Secondary</button>
+        </div>
+        <div class="overflow-hidden" style="max-height: 50vh;">
+            <div class="container px-5">
+                <div id="video-container">
+                    <div class="mask"></div>
+                    <video id="video-stream" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image"
+                        width="100%" height="auto" loading="lazy" autoplay muted playsinline></video>
+                    <div id="face-detected-overlay">Recognizing Face</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/face-landmarks-detection"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/face-api"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
